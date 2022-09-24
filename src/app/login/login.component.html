@@ -2,14 +2,14 @@
     <div class="container w-50 border mt-5 p-3" style="background:rgb(0,0,0,0.5) ;"> <br>
 <h1 class="text-center text-white">Login Page</h1>
 <div class="p-2 mt-2">
-    <input id="acid" type="text" [placeholder]="acnt" (change)="acnoChange($event)" class="form-control" id="acid">
+    <input id="acid" type="text" [placeholder]="acnt" #acno class="form-control" id="acid">
 </div>
 <div class="p-2 mt-2">
-    <input id="pid" type="password" placeholder="Password" (change)="pswChange($event)"  class="form-control" id="pid">
+    <input id="pid" type="password" placeholder="Password" #psw class="form-control" id="pid">
     
 </div> <br>
 <div class="p-2 mt-2">
-    <button  id="bt" type="button" (click)="login()" class="btn btn-success">SIGN IN</button>  <br> <br>
+    <button  id="bt" type="button" (click)="login(acno,psw)" class="btn btn-success">SIGN IN</button>  <br> <br>
 </div>
 <h5 class="text-white" id="aa">Don't have an account?     <a  href="./register.html" onclick="" style="text-decoration: none;" class="text-info">Create</a> </h5>
 
